@@ -16,8 +16,21 @@
             <li><a href="#">Login</a></li>
             <li><a href="./pages/home.html">Home</a></li>
             <li><a href="./pages/profile.html">Profile</a></li>
+            <li><a href="./pages/tags.html">Tags</a></li>
         </ul>
     </nav>
-    <!-- Agregar información de Login -->
+    <!-- información de Login para tarea 1 -->
+    <section>
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
 </body>
 </html>
