@@ -10,12 +10,13 @@
         integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" 
         crossorigin="anonymous"
     >
+    <!-- Iconos para usar en el log-in -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- css -->
     <link rel="stylesheet" href="./styles/style.css">
     <title>TC2005B</title>
 </head>
 <!-- navbar tarea 2 -->
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">TC2005B.504</a>
@@ -54,10 +55,10 @@
     </div>
   </nav>
 
-<body>
-    <header>
-        <h1 id="title_id_log"> Log-In </h1>
-    </header>
+<body class = "indexpage">
+<div class="indexpage-container">
+  <div class="login-page">
+    <h1> Log-In </h1>
     <!-- <nav>
         <ul>
             <li><a href="#">Login</a></li>
@@ -66,9 +67,29 @@
             <li><a href="./pages/tags.html">Tags</a></li>
         </ul>
     </nav> -->
-    <!-- información de Login para tarea 1 -->
-    <section>
-        <div class = "login-section">
+
+    <!-- Login tarea 2 -->
+    <div class="input-box">
+      <input type="text" placeholder="Username"
+      required>
+      <i class='bx bxs-user' ></i>
+    </div>
+    <div class="input-box">
+      <input type="password"
+      placeholder="Password" required>
+      <i class='bx bxs-lock-alt' ></i>
+    </div>
+
+    <div class="remember">
+      <label> <input type="checkbox"> Remember me</label>
+    </div>
+
+    <form action="/pages/home.html" method="GET">
+    <button type="submit" class= "logbutton"> Login </button>
+    </form>
+
+    <!-- LOGIN VIEJO PARA TAREA 1 -->
+        <!-- <div class = "login-section">
             <form action="/pages/home.html" method="GET">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -78,7 +99,10 @@
                 <br>
                 <button type="submit">Login</button>
             </form>
-        </div>
+        </div> -->
+  </div>
+</div>
+  <section>
         <script 
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" 

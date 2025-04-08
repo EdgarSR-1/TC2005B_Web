@@ -1,3 +1,4 @@
+/* cambios generales / vistos en clase*/
 a {
     color: crimson;
     margin: 5px 10px 20px 30px;
@@ -17,26 +18,218 @@ p {
 }
 
 #title_id:hover {
-    color: rgb(186, 9, 27);
+    color: rgba(124, 20, 44, 0.8);
 }
 
-#title_id_log:hover {
-    color: rgb(186, 9, 27);
+/* log-in / index */
+body.indexpage {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("../images/figure.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
-#title_id_log {
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
+.indexpage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-
-.login-section {
-    width: 400px;
-    margin-top: 100px;
-    padding: 30px;
+.login-page{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    color: #fff;
     border-radius: 10px;
-    margin: 100px auto;
+    padding: 40px 40px 60px;
+}
+.login-page h1{
+    font-size: 36px;
+    text-align: center;
+}
+.login-page h1:hover{
+    color: purple;
+}
+.login-page .remember {
+    display: flex;
+    justify-content: center;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.login-page .logbutton {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    /* para cambiar el mouse y se note que es un boton seleccionable */
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+    border-radius: 40px;
+}
+.login-page .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+}
+.input-box input::placeholder {
+    color: #fff;
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* profile */
+body.profilepag{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("../images/sm-fondo.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.profilepag .profile-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    color:#fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+.profile-card .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text .name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+.text .matricula {
+    font-size: 15px;
+    font-weight: 400;
+}
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #334b69;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+.image .profile-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.profile-card h2 {
+    color: white;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+.profile-card::before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: #334b69;
+
+}
+
+/* tags */
+body.tagspag {
+    background: #334b69;
+}
+.tags-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.tags-container h1 {
+    color: cyan;
+}
+.tags-container h1:hover {
+    color: white;
+}
+.tagspag {
+    color: white;
+}
+
+/* home */
+body.homepag {
+    background: url("../images/sm-fondo2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.home-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    color:#fff;
+    border-radius: 40px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+body.homepag h1 {
+    color: rosybrown;
+    font-size: 36px;
+    text-align: center;
+}
+body.homepag h1:hover{
+    color: whitesmoke;
 }
