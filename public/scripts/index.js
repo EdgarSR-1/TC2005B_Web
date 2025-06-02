@@ -3,24 +3,33 @@
 // prompt("ingresa tus datos")
 // confirm("Pregunta")
 
-const boton = document.querySelector('.logbutton');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password')
-const correctUser = "edgar";
-const correctPass = "123";
+// const boton = document.querySelector('.logbutton');
+// const usernameInput = document.getElementById('username');
+// const passwordInput = document.getElementById('password');
+// const correctUser = "edgar";
+// const correctPass = "123";
 
 
-const login = () => {
+// para username y password
+const boton = document.getElementById("btnLogin");
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+
+const login = async () => {
     // validar credenciales
-    console.log(usernameInput.value + " " + passwordInput.value);
-    // si login es correcto
-    if((usernameInput.value === correctUser) && (passwordInput.value === correctPass)){
-        sessionStorage.name = "Edgar Salazar";
-        window.location = "./pages/profile.html"
-    } else {
-        alert("Usuario o Contraseña Incorrecta");
-        console.log("credenciales incorrectas");
-    }
+    const credentials = {username: username.value, password: password.value};
+    const data = fetch ("http://localhost:5000/login", {
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify(credentials),
+    });
+}
+const user = await data.json();
+if (res.isLogin == true) {
+    sessionStorage.setItem("name", res.user.name);
+    sessionStorage.setItem("id", res.user.id);
+    windows.location = "./pages/profile.html";
+} else {
+    console.log("Usuario o contraseña incorrectos");
 }
 
 boton.addEventListener("click", login);
